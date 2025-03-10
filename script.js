@@ -168,3 +168,4 @@ shippingForm.addEventListener("submit", (event) => {
     cart = [];
     updateCart();
 });
+

@@ -236,3 +236,23 @@ body {
     border-radius: 10px;
     margin-bottom: 10px;
 }
+
+/* Estilos generales */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+/* Contenido de la app (visible en móviles) */
+.app-content {
+    display: block;
+}
+
+/* En pantallas más grandes de 768px, ocultamos TODO */
+@media (min-width: 768px) {
+    body {
+        display: none;
+    }
+}
