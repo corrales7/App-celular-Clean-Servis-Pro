@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CleanPro Service - Tienda</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<!-- datos para el envio  -->
+<div class="modal" id="shipping-modal">
+    <div class="modal-content">
+        <span id="close-shipping">&times;</span>
+        <h2>📦 Información de Envío</h2>
+        <form id="shipping-form">
+            <label for="name">Nombre Completo:</label>
+            <input type="text" id="name" required>
+
+            <label for="address">Dirección de Entrega:</label>
+            <input type="text" id="address" required>
+
+            <label for="phone">Teléfono:</label>
+            <input type="tel" id="phone" required>
+
+            <button type="submit">Confirmar Pedido</button>
+        </form>
+    </div>  
+    
+</div>
+
+<div id="order-confirmation" class="hidden">
+    <h2>✅ ¡Pedido realizado con éxito!</h2>
+    <p>Gracias por comprar en Clean Pro Service. Tu pedido está en camino. 🚀</p>
+</div>
+
+<body>
+    <button id="cart-btn">🛒 <span id="cart-count">0</span></button>
+    <h1 class="main-title">Tienda de Productos</h1>
+    
+    <section class="product-section" id="productos-hogar">
+        <h2>🛏 Productos para el Hogar</h2>
+        <div class="product-container">
+            <div class="product-card" data-name="Jabón Multiusos" data-price="12000">
+                <h3>Jabón Multiusos</h3>
+                <p>$12,000</p>
+                <button class="add-to-cart">Agregar al carrito</button>
+            </div>
+            <div class="product-card" data-name="Desinfectante Floral" data-price="15000">
+                <h3>Desinfectante Floral</h3>
+                <p>$15,000</p>
+                <button class="add-to-cart">Agregar al carrito</button>
+            </div>
+            <div class="product-card" data-name="Esponjas de Cocina" data-price="8000">
+                <h3>Esponjas de Cocina</h3>
+                <p>$8,000</p>
+                <button class="add-to-cart">Agregar al carrito</button>
+            </div>
+        </div>
+    </section>
+    
+    <div class="modal" id="cart-modal">
+        <div class="modal-content">
+            <span id="close-cart">&times;</span>
+            <h2>🛒 Carrito de Compras</h2>
+            <ul id="cart-items"></ul>
+            <p><strong>🛍 Total de Productos:</strong> <span id="total-products">0</span></p>
+            <p><strong>💰 Total a Pagar:</strong> <span id="total-amount">$0</span></p>
+            <button id="checkout-btn">✅ Finalizar Compra</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
